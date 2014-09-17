@@ -1,0 +1,24 @@
+
+<table class="tblResults">
+    <thead>
+        <tr>
+            <th>Ratio</th>
+            <th>TokenA</th>
+            <th>TokenB</th>
+        </tr>
+    </thead>
+
+    <tbody class="tblBody">
+
+    {%- for ratio, a, b, (dump_a, dump_b) in results %}
+
+        <tr>
+            <td class="ratio">{{ ratio }}</td>
+            <td class="colA">{{ dump_a | safe }}</td>
+            <td class="colB">{{ dump_b | safe }}</td>
+        </tr>
+
+    {% endfor -%}
+
+    </tbody>
+</table>
